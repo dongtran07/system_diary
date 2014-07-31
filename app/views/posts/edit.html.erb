@@ -1,0 +1,16 @@
+<div class="col-md-12" >
+<%= form_for(@post) do |f|%>
+  <%= f.label "Header"%>
+  <br>
+  <%= f.text_field :content_header, class:"form-control"%>
+  <%= f.label "Type"%>
+  <% types_array = Type.all.map { |type| [type.name, type.id] } %>
+  <%= f.select(:type_id,types_array,{},{class: "form-control"}) %>
+  <%= f.label "Content"%>
+  <br>
+  <%= f.bootsy_area :content, rows:'15', class: "form-control"%>
+  <br>
+  <%= f.submit "Update",class:"btn btn-default"%>
+  <br>
+<%end%>
+</div>

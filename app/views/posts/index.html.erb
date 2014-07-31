@@ -1,0 +1,19 @@
+
+<%if @posts.count > 0%>
+<div class="col-md-12" >
+	<div >
+		<ul class="timeline">
+			<%= sync_new partial: 'post_row', resource: Post.new %>
+			<% @posts.each do |post|%>
+				<%= sync partial: 'post_row', resource: post%>
+			<%end%>
+			
+				<li>
+					<i class="fa fa-flask"></i>
+				</li>
+		</ul>
+	</div>
+<%else%>
+	<p>No post is there!</p>
+<%end%>
+</div>

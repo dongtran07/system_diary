@@ -1,0 +1,9 @@
+
+# Pusher
+ development:
+   adapter_javascript_url: "http://js.pusher.com/2.0/pusher.min.js" 
+   app_id: "82959"
+   api_key: "47c4a70382020f5f8fe8"
+   auth_token: "5ed242a748b6f6131542"
+   adapter: "Pusher"
+   async: true

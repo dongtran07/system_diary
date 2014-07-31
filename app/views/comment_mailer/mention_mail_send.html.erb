@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      You was metioned by <%= @name %>
+      <br>
+    </p>
+    <p>
+      on this link: <%=link_to 'post',"http:/localhost:3000"+post_path(@url) %>.
+    </p>
+  </body>
+</html>

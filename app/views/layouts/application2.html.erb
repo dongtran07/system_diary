@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>SystemDiary</title>
+  <%= stylesheet_link_tag    "application", media: "all"%>
+  <%= javascript_include_tag "application"%>
+  <%= javascript_include_tag Sync.adapter_javascript_url %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+      
+  <div class="wrapper">
+    <div class="box">
+      <%= render "layouts/aside2"%>
+      <div class="column col-sm-10 col-xs-11" id="main">
+        <%= render "layouts/header"%>
+       <div class="container" >
+        <!--Blog Start-->  
+            <div class="row ">  
+                 <!--Blog Listing--> 
+                <%=yield%>
+                <!--Blog Listing--> 
+                
+            </div>
+           <!--Blog end-->  
+
+           
+        </div>
+    <!-- /.container -->
+      <!--Footer -->  
+      </div>
+      </div>
+      </div>                     
+                 <div class="col-md-12 top-margin footer-section">
+                     &copy; 2014 | &nbsp; All Rights Reserved | &nbsp; www.yourdomain.com
+                 </div>
+             <!--Footer end -->
+</body>
+</html>

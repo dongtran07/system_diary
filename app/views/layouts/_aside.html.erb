@@ -1,0 +1,26 @@
+<div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
+              
+                <ul class="nav">
+                
+                <ul class="nav hidden-xs" id="lg-menu">
+                    <% types=Type.all%>
+                      <%types.each do |type|%>
+                        <li><a href='<%=root_url+"types/#{type.id}"%>'><i class="<%=type.class_icon%>"></i> <%=type.name%></a></li>
+                    <%end%>
+                </ul>
+                <ul class="list-unstyled hidden-xs" id="sidebar-footer">
+                    <li>
+                      <a href="http://vccloud.vn"><h3>VCCORP</h3> <i class="glyphicon glyphicon-heart-empty"></i> Vccloud</a>
+                    </li>
+                </ul>
+              
+                <!-- tiny only nav-->
+              <ul class="nav visible-xs" id="xs-menu">
+                   <% types=Type.all%>
+                      <%types.each do |type|%>
+                        <li><a href='<%=root_url+"types/#{type.id}"%>'><i class="<%=type.class_icon%>"></i></a></li>
+                    <%end%>
+                </ul>
+              
+            </div>
+            <!-- /sidebar -->
