@@ -33,6 +33,8 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
+    acts-as-taggable-on (3.3.0)
+      activerecord (>= 3, < 5)
     acts_as_commentable_with_threading (1.2.0)
       activerecord (>= 3.0)
       activesupport (>= 3.0)
@@ -170,6 +172,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on
   acts_as_commentable_with_threading
   bootsy
   coffee-rails (~> 4.0.0)

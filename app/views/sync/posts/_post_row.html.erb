@@ -1,8 +1,5 @@
-
 <li class="time-label">
   <span class="<%= post.type.bg_class%>">Posted in : <%= post.type.name%>: <%= post.user.name%></span>
-  <br />
-  <br />
 </li>
 
 <li class="time-label">
@@ -16,6 +13,8 @@
     <h3 class="timeline-header"><%=link_to post.content_header, post%></h3>
     <div class="index-box-body">
       <%= simple_format(post.content) %>
+    <br>
+      <%= post.tag_list%>
     </div>
     <div class='timeline-footer'>                                                                            
       <a class="btn btn-default btn-xs">by: <%= post.user.name%></a> 
@@ -26,3 +25,5 @@
     </div>
   </div>
 </li>
+<br>
+<br>
