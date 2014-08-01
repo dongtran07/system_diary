@@ -254,11 +254,21 @@ img.navbar-brand {
     width: auto;
 }
 
-
+.hashtag{
+  position: fixed;
+  width: 24%;
+}
 /*
  * off canvas sidebar
  * --------------------------------------------------
  */
+ @media screen and (max-width: 950px){
+  .hashtag{
+    position: relative;
+    width: 100%;
+    top: 10px;
+  }
+ }
 @media screen and (max-width: 768px) {
   .row-offcanvas {
     position: relative;
@@ -284,5 +294,10 @@ img.navbar-brand {
 
   #sidebar, #sidebar a, #sidebar-footer a {
     padding-left:10px;
+  }
+  .hashtag{
+    position: relative;
+    width: 100%;
+    top: 10px;
   }
 }

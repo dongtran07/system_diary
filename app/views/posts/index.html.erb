@@ -1,6 +1,6 @@
 
 <%if @posts.count > 0%>
-<div class="col-md-12" >
+<div class="col-md-8" >
 	<div >
 		<ul class="timeline">
 			<%= sync_new partial: 'post_row', resource: Post.new %>
@@ -16,4 +16,12 @@
 <%else%>
 	<p>No post is there!</p>
 <%end%>
+</div>
+<div class="col-md-4">
+	<div class="panel panel-default hashtag">
+  <div class="panel-heading">Panel heading without title</div>
+  <div class="panel-body">
+    Panel content Panel conte Panel conte Panel conte
+  </div>
+</div>
 </div>

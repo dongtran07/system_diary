@@ -7,12 +7,12 @@
 
 <li class="time-label">
    <span class="bg-teal"><%= post.created_at.strftime("%d-%m-%Y")%></span>
+   <span class="time"><i class="fa fa-clock-o"></i>&nbsp;<%= post.created_at.strftime("%H:%M")%></span>
 </li>
 
 <li>
   <i class="<%= post.type.class_icon%> <%= post.type.bg_class%>"></i>
   <div class="timeline-item">
-    <span class="time"><i class="fa fa-clock-o"></i>&nbsp;<%= post.created_at.strftime("%H:%M")%></span>
     <h3 class="timeline-header"><%=link_to post.content_header, post%></h3>
     <div class="index-box-body">
       <%= simple_format(post.content) %>

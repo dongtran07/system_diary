@@ -219,7 +219,6 @@
 }
 .index-box-body {
   max-height: 200px;
-  min-height: 200px;
   position: relative;
   overflow:hidden;
   padding-left: 20px;
