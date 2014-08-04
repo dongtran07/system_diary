@@ -6,7 +6,7 @@
   <%= f.label "Type"%>
   <% types_array = Type.all.map { |type| [type.name, type.id] } %>
   <%= f.select(:type_id,types_array,{},{class: "form-control"}) %>
-  <%= f.label :tag_list, "Tags (separated by commas)" %>
+  <%= f.label :tag_list, "Tags" %>
   <%= f.text_field :tag_list, class: "form-control" %>
   <%= f.label "Content"%>
   <br>

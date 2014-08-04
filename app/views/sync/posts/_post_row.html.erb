@@ -14,7 +14,6 @@
     <div class="index-box-body">
       <%= simple_format(post.content) %>
     <br>
-      <%= post.tag_list%>
     </div>
     <div class='timeline-footer'>                                                                            
       <a class="btn btn-default btn-xs">by: <%= post.user.name%></a> 
@@ -23,6 +22,11 @@
       <a class="btn btn-warning btn-xs"> <%=post.comment_threads.count%> Comment</a>
       <%=link_to "Read More...", post, class:"btn btn-danger btn-xs"%>
     </div>
+    <ul class="tags">
+      <%post.tag_list.each do |tag|%>
+        <li><%=link_to tag, tag_path(tag)%></li>
+      <%end%>
+    </ul>
   </div>
 </li>
 <br>

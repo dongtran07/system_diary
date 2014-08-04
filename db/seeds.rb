@@ -6,7 +6,5 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Type.create(name: "Tecnology",class_icon: "glyphicon glyphicon-hdd", bg_class: "bg-green") 
-Type.create(name: "Infomation",class_icon: "glyphicon glyphicon-info-sign", bg_class: "bg-light-blue") 
-Type.create(name: "Question",class_icon: "glyphicon glyphicon-question-sign", bg_class: "bg-red") 
-Type.create(name: "Discussion",class_icon: "glyphicon glyphicon-briefcase", bg_class: "bg-navy")
+Type.create(name: "Public Cloud", class_icon: "glyphicon glyphicon-leaf", bg_class: "bg-light-blue") 
+Type.create(name: "Private Coud", class_icon: "glyphicon glyphicon-lock", bg_class: "bg-navy") 

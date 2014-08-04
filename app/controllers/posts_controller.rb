@@ -1,9 +1,13 @@
 class PostsController < ApplicationController
   
   def index
-    @posts= Post.all.order('created_at DESC')
+    if params[:tag]
+      @posts = Post.tagged_with(params[:tag]).order('created_at DESC')
+    else
+      @posts= Post.all.order('created_at DESC')
+    end
   end
-  
+      
   def show
     @post = Post.find(params[:id])
     @comments = @post.comment_threads
