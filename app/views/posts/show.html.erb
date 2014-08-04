@@ -8,10 +8,14 @@
                 <hr>
                 <p>
                     <span class="glyphicon glyphicon-time"></span> Posted on <%= @post.created_at.strftime("%b %e, %Y at %l:%M %p")%></p>
-                <hr>
+                <div class="showbody">
                 <p><%= simple_format(@post.content)%></p>
-
-                <hr>
+                <ul class="tags">
+                  <%@post.tag_list.each do |tag|%>
+                    <li><%=link_to tag, tag_path(tag)%></li>
+                  <%end%>
+                </ul>
+                </div>
 <%if (current_user.id == @post.user_id)%>
               <%= link_to "Edit", edit_post_path(@post), class:"btn btn-default"%>
 <%= link_to "Delete", @post, class:"btn btn-default", method: :delete,

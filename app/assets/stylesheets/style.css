@@ -359,3 +359,10 @@ img.navbar-brand {
   }
 .tags a:hover{background:#555;} 
 .tags a:hover:before{border-color:transparent #555 transparent transparent;}
+.showbody{
+  position: relative;
+  border: 1px solid rgba(204, 204, 204, 0.33);
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
