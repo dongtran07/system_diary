@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'rubycas-client'
 gem "rubycas-client-rails", :git => "git://github.com/rubycas/rubycas-client-rails.git"
-
+gem 'will_paginate-bootstrap'
 gem 'bootsy'
 gem 'acts_as_commentable_with_threading'
 gem 'public_activity'

@@ -1,13 +1,13 @@
 
 <%if @posts.count > 0%>
 <div class="col-md-8" >
-	<div >
-		<ul class="timeline">
+	<div>
+		<ul class="timeline ressources-post">
 			<%= sync_new partial: 'post_row', resource: Post.new %>
 			<% @posts.each do |post|%>
-				<%= sync partial: 'post_row', resource: post%>
+				<%= sync partial: 'post_row', resource: post,colection: @posts %>
 			<%end%>
-			
+			<%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
 				<li>
 					<i class="fa fa-flask"></i>
 				</li>

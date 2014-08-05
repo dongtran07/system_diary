@@ -18,7 +18,7 @@
               <ul class="nav visible-xs" id="xs-menu">
                    <% types=Type.all%>
                       <%types.each do |type|%>
-                        <li><a href='<%=root_url+"types/#{type.id}"%>'><i class="<%=type.class_icon%>"></i></a></li>
+                        <li><a href='<%=type_path(type)%>'><i class="<%=type.class_icon%>"></i></a></li>
                     <%end%>
                 </ul>
               

@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   hide_action :current_user
   private
     def create_user
-      cur_user = session[:cas_user]
+      cur_user = session[:cas_user].downcase()
       user= User.where(email: cur_user)
       if(cur_user && user.count == 0)
         User.create({name:cur_user.split("@").first, email: cur_user})

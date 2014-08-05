@@ -9,21 +9,24 @@
       <% @posts.each do |post|%>
         <%= sync partial: 'post_row', resource: post%>
       <%end%>
-      
+       <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
         <li>
           <i class="fa fa-flask"></i>
         </li>
     </ul>
   </div>
+ 
 <%else%>
   <p>No post is there!</p>
 <%end%>
 </div>
 <div class="col-md-4">
   <div class="panel panel-default hashtag">
-  <div class="panel-heading">Panel heading without title</div>
-  <div class="panel-body">
-    Panel content Panel conte Panel conte Panel conte
+  <div class="panel-heading">Tags Cloud</div>
+  <div class="panel-body" id="tag-cloud">
+    <% tag_cloud Post.tag_counts, %w[s m l] do |tag, css_class| %>
+    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+  <% end %>
   </div>
 </div>
 </div>

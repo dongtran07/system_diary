@@ -305,21 +305,20 @@ img.navbar-brand {
   margin:0;
   padding:0;
   position:absolute;
-  right:24px;
-  bottom:-12px;
+  top:-12px;
   list-style:none;
   }
   .tags li, .tags a{
   float:left;
-  height:24px;
-  line-height:24px;
+  height:30px;
+  line-height:30px;
   position:relative;
-  font-size:11px;
+  font-size:15px;
   }
   .tags a{
   margin-left:20px;
   padding:0 10px 0 12px;
-  background:#0089e0;
+  background:rgba(49, 81, 78, 1);
   color:#fff;
   text-decoration:none;
   -moz-border-radius-bottomright:4px;
@@ -337,12 +336,11 @@ img.navbar-brand {
   left:-12px;
   width:0;
   height:0;
-  border-color:transparent #0089e0 transparent transparent;
+  border-color:transparent rgba(1, 35, 32, 1) transparent transparent;
   border-style:solid;
-  border-width:12px 12px 12px 0;    
+  border-width:12px 12px 0 0;    
   }
   .tags a:after{
-  content:"";
   position:absolute;
   top:10px;
   left:0;
@@ -357,12 +355,22 @@ img.navbar-brand {
   -webkit-box-shadow:-1px -1px 2px #004977;
   box-shadow:-1px -1px 2px #004977;
   }
+.tags .disabled a{
+  background: black;
+} 
+.viewpost{
+  right:20px;
+}
+.viewpost a{
+  background: rgba(197, 0, 0, 1);
+}
+
 .tags a:hover{background:#555;} 
 .tags a:hover:before{border-color:transparent #555 transparent transparent;}
 .showbody{
   position: relative;
   border: 1px solid rgba(204, 204, 204, 0.33);
-  padding-left: 10px;
-  margin-bottom: 10px;
+  padding: 10px;
+  margin: 25px 0 20px 0;
   border-radius: 5px;
 }

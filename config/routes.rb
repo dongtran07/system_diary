@@ -4,8 +4,9 @@ SystemDiary::Application.routes.draw do
   resources :comments, :only => [:create, :destroy]
   root to: "posts#index"
   get 'tags/:tag', to: 'posts#index', as: :tag
+  get "types/:id" => 'types#show', as: :type
   get "sessions/destroy"
-  get "types/:id" => 'types#show'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
