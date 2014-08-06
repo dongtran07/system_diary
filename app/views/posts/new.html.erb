@@ -1,8 +1,5 @@
 <div class="col-md-12" >
 <%= form_for(@post) do |f|%>
-  <%= f.label "Header"%>
-  <br>
-  <%= f.text_field :content_header, class:"form-control"%>
   <%= f.label "Type"%>
   <% types_array = Type.all.map { |type| [type.name, type.id] } %>
   <%= f.select(:type_id,types_array,{},{class: "form-control"}) %>

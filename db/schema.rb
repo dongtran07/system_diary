@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140801082826) do
+ActiveRecord::Schema.define(version: 20140806024841) do
 
   create_table "bootsy_image_galleries", force: true do |t|
     t.integer  "bootsy_resource_id"
@@ -48,8 +48,7 @@ ActiveRecord::Schema.define(version: 20140801082826) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "content_header"
-    t.integer  "page_view",      default: 0
+    t.integer  "page_view",  default: 0
     t.integer  "user_id"
     t.integer  "type_id"
   end
