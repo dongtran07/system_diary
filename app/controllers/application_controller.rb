@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   before_filter RubyCAS::Filter
   before_filter :create_user
   def current_user
-    @current_user ||= User.find_by(email: session[:cas_user]) if session[:cas_user]
+    @current_user ||= User.find_by(email: session[:cas_user].downcase()) if session[:cas_user]
   end
   helper_method :current_user
   hide_action :current_user
