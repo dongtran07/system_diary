@@ -1,5 +1,12 @@
 <div class="col-md-12" >
 <%= form_for(@post) do |f|%>
+    <% if @post.errors.any? %>
+      <ul>
+        <% @post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    <% end %>
   <%= f.label "Type"%>
   <% types_array = Type.all.map { |type| [type.name, type.id] } %>
   <%= f.select(:type_id,types_array,{},{class: "form-control"}) %>

@@ -5,9 +5,11 @@
                 <ul class="nav hidden-xs" id="lg-menu">
                     <% types=Type.all%>
                       <%types.each do |type|%>
-                        <li><a href='<%=root_url+"types/#{type.id}"%>'><i class="<%=type.class_icon%>"></i> <%=type.name%></a></li>
-                    <%end%>
+                        <li><a href='<%=root_url+"types/#{type.id}"%>'><i class="<%=type.class_icon%>"></i> <%=type.name%></a></li> 
+                      <%end%>
+                    
                 </ul>
+                <button class="btn" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="glyphicon glyphicon-plus"></i></button>
                 <ul class="list-unstyled hidden-xs" id="sidebar-footer">
                     <li>
                       <a href="http://vccloud.vn"><h3>VCCORP</h3> <i class="glyphicon glyphicon-heart-empty"></i> Vccloud</a>

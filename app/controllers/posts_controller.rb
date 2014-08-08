@@ -26,6 +26,7 @@ class PostsController < ApplicationController
       sync_new @post
       flash[:success]="Create post successful"
       redirect_to root_url
+      PostMailer.new_post_send(@post).deliver
     else
       render "new"
     end
