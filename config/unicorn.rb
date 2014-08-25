@@ -4,7 +4,7 @@ working_directory "/home/clouduser/system_diary"
 
 # Unicorn PID file location
 # pid "/path/to/pids/unicorn.pid"
-pid "/home/clouduser/system_diary/pids/unicorn.pid"
+pid "/home/clouduser/system_diary/tmp/pids/unicorn.pid"
 
 # Path to logs
 # stderr_path "/path/to/log/unicorn.log"
@@ -13,8 +13,7 @@ stderr_path "/home/clouduser/system_diary/log/unicorn.log"
 stdout_path "/home/clouduser/system_diary/log/unicorn.log"
 
 # Unicorn socket
-listen "/tmp/unicorn.[System Diary].sock"
-listen "/tmp/unicorn.systemdiary.sock"
+listen "/home/clouduser/system_diary/tmp/sockets/unicorn.sock"
 
 # Number of processes
 # worker_processes 4

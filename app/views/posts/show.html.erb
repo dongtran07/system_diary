@@ -18,8 +18,6 @@
                 </div>
 <%if (current_user.id == @post.user_id)%>
               <%= link_to "Edit", edit_post_path(@post), class:"btn btn-default"%>
-<%= link_to "Delete", @post, class:"btn btn-default", method: :delete,
-                                    data: { confirm: "You sure?" } %>
 <%end%>   
     <div id="comments-list">
         <% @comments.each do |comment|%>

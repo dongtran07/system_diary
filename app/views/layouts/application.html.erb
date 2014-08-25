@@ -48,9 +48,29 @@
                 </div><!-- /padding -->
             </div>
             <!-- /main -->
-          
         </div>
     </div>
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5>Create Type</h5>
+                          </div>
+                          <div class="modal-body">  
+                          <%@type = Type.new%>
+                          <%= form_for(@type, :remote =>true) do |f|%>
+                            <%= f.label "Name"%>
+                            <%= f.text_field :name, class: "form-control"%>
+                            <br>
+                            <%= f.label "Icon"%>
+                            <%= f.text_field :class_icon, class: "icon-picker"%>
+                            <br>
+                            <center><%= f.submit "Create",:class => 'btn btn-normal btn-default',:id =>"closeModal"%></center>
+                          <%end%> 
+                          </div>              
+                        </div>
+                      </div>
+                    </div>
 </div>
 
   <!-- script references -->
@@ -66,6 +86,9 @@
           $('#btnShow').toggle();
       });
       });
+      $(function () {
+            $(".icon-picker").iconPicker();
+        });
     </script>
   </body>
 </html>

@@ -1,0 +1,11 @@
+<% if @type.errors.any? %>
+        <% @type.errors.full_messages.each do |message| %>
+          $('#lg-menu').append("<li class='hidekq'><%= message %></li>");
+        <% end %>
+
+<% else %>
+$('#lg-menu').append("<%= j render @type%>");
+  document.getElementById("new_type").reset();
+<%end%>
+$('.bs-example-modal-sm').modal('hide');
+$('.hidekq').fadeOut(4000);

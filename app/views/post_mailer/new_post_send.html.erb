@@ -9,7 +9,9 @@
       <br>
     </p>
     <p>
-      at this link: <%=link_to 'post',"http://note.vccloud.vn"+post_path(@url) %>.
+      on this link: <%=link_to 'post',"http://note.vccloud.vn"+post_path(@url) %>.
     </p>
+    <h4>Preview content:</h4>
+    <%= sanitize(@url.content) %>
   </body>
 </html>

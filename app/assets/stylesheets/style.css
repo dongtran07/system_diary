@@ -52,7 +52,7 @@ hr {
 }
 
 .full{
-    padding-top:70px;
+    padding-top:10px;
 }
 
 .box {
@@ -233,8 +233,8 @@ small.text-muted {
 /* adjust the contents on smaller devices */
 @media (max-width: 768px) {
 
-  .column .padding {
-    padding: 7px;
+  #left-co li{
+    float:left;
   }
 
   .full{
@@ -270,7 +270,10 @@ img.navbar-brand {
   }
  }
 @media screen and (max-width: 768px) {
-  .row-offcanvas {
+ #left-co{
+    float: left;	
+ } 
+ .row-offcanvas {
     position: relative;
     -webkit-transition: all 0.25s ease-out;
     -moz-transition: all 0.25s ease-out;
@@ -373,4 +376,24 @@ img.navbar-brand {
   padding: 25px 10px;
   margin: 25px 0 20px 0;
   border-radius: 5px;
+}
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0px;
+    border-width: 1px 1px 1px 5px;
+    border-style: solid;
+    border-color: #EEE;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    border-radius: 3px;
+    background-color: rgba(254, 255, 244, 1);
+}
+.bs-callout-danger {
+    border-left-color: #D9534F;
+}
+.bs-callout-danger h4{
+    color: #D9534F;
 }

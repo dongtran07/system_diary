@@ -1,8 +1,4 @@
 <li class="time-label">
-  <span class="<%= post.type.bg_class%>">Posted in : <%= post.type.name%>: <%= post.user.name%></span>
-</li>
-
-<li class="time-label">
    <span class="bg-timeset"><%= post.created_at.strftime("%d-%m-%Y")%></span>
    <span class="time"><i class="fa fa-clock-o"></i>&nbsp;<%= post.created_at.strftime("%H:%M")%></span>
 </li>
@@ -10,25 +6,22 @@
 <li>
   <i class="<%= post.type.class_icon%> <%= post.type.bg_class%>"></i>
   <div class="timeline-item">
+    <h3 class="timeline-header"><b>Posted in :</b> <%= link_to post.type.name, post.type%> by <%= post.user.name%></h3>
     <div class="index-box-body">
       <%= sanitize(post.content) %>
     <br>
     </div>
-    <div class='timeline-footer'>                                                                            
-      <a class="btn btn-default btn-xs">by: <%= post.user.name%></a> 
-      <a  href="<%=type_path(post.type)%>" class="btn <%= post.type.bg_class%> btn-xs"><%= post.type.name%></a>
-      <a class="btn btn-default btn-xs"><%= post.page_view%> Views</a>  
-      <a class="btn btn-default btn-xs"> <%=post.comment_threads.count%> Comment</a>
-    </div>
-    <ul class="tags">
-      <li class="disabled"><a href="#"><i class="glyphicon glyphicon-tags"></i><i class="glyphicon glyphicon-chevron-right"></i></a></li>
-      <%post.tag_list.each do |tag|%>
-        <li><%=link_to tag, tag_path(tag)%></li>
+    <div class='timeline-footer'> 
+      <a class="btn btn-default btn-xs" style ="cursor: default;"> Last edited : <%= post.updated_at.strftime("%b %e, %Y at %l:%M %p")%></a>                            
+      <a class="btn btn-default btn-xs" style ="cursor: default;"><%= post.page_view%> Views</a> 
+      <%=link_to post.comment_threads.count.to_s + " Comments", post_path(post, :anchor => 'comments-list'),:class=>"btn btn-default btn-xs"%>
+      <%=link_to "Read more", post,:class=>"btn btn-danger btn-xs"%><br>
+      <a class="btn btn-default btn-xs" style ="cursor: default;"><i class="glyphicon glyphicon-tags"></i><i class="glyphicon glyphicon-chevron-right"></i>
+        <%post.tag_list.each do |tag|%>
+          <%=link_to tag, tag_path(tag)%>, 
       <%end%>
-    </ul>
-    <ul class="tags viewpost">
-      <li><%=link_to "View Post", post%><li>
-    </ul>
+      </a>
+    </div>
   </div>
 </li>
 <br>

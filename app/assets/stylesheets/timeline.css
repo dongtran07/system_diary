@@ -173,7 +173,7 @@
   background-color: #85144b !important;
 }
 .bg-timeset{
-  background-color: rgba(14, 152, 69, 1) !important;
+  background-color: rgba(0, 8, 42, 1) !important;
 }
 
 /*====================================
@@ -223,11 +223,12 @@
   color: #85144b !important;
 }
 .index-box-body {
-  margin-top: 25px;
+  margin-top: 8px;
   max-height: 150px;
   position: relative;
   overflow:hidden;
-  padding-left: 20px;
+  padding:0 10px;
+  background-color:#F6F6F6;
 }
 .index-box-body .read-more { 
   position: absolute; 

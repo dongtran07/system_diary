@@ -1,5 +1,19 @@
 <div class="col-md-12" >
+   <div class="bs-callout bs-callout-danger">
+    <ul>
+      <h4>Một số lưu ý khi tạo post</h4>
+      <li >Tên tag nên để ngắn nhất có thể, tag được ngăn cách bởi dấu ",";</li>
+      <li >Khi copy liên tục editor có tự sinh ra khoảng trắng;</li>
+    </ul>
+  </div>
 <%= form_for(@post) do |f|%>
+    <% if @post.errors.any? %>
+      <ul>
+        <% @post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    <% end %>
   <%= f.label "Type"%>
   <% types_array = Type.all.map { |type| [type.name, type.id] } %>
   <%= f.select(:type_id,types_array,{},{class: "form-control"}) %>
@@ -9,7 +23,14 @@
   <br>
   <%= f.bootsy_area :content, rows:'15', class: "form-control"%>
   <br>
+  <%= f.label "Mention"%>
+  <%= f.text_field :mentionlist, class: "form-control", :id => 'chenki'%>
+  <br>
   <%= f.submit "Create post",class:"btn btn-default"%>
   <br>
 <%end%>
 </div>
+<script>
+  data = <%= raw User.pluck(:name).compact %>; 
+  $('#chenki').atwho({at:"@", 'data':data});
+</script>

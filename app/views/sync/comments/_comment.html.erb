@@ -8,5 +8,5 @@
     <%= comment.user.name %>
       <small> <%= "Commented "+time_ago_in_words(comment.created_at)+" ago" unless comment.created_at.blank? %></small>
   </h3>  
-  <p><%= comment.body%></p>
+  <p><%=simple_format(comment.body)%></p>
 </div>

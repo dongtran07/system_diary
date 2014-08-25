@@ -9,7 +9,7 @@
       <br>
     </p>
     <p>
-      at this link: <%=link_to 'post',"http://note.vccloud.vn"+post_path(@url) %>.
+      at this link: <%=link_to 'post',"http://note.vccloud.vn/"+post_path(@url) %>.
     </p>
   </body>
 </html>

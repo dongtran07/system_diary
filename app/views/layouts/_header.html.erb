@@ -10,12 +10,11 @@
       <%= link_to(image_tag('logo-b.png', class:"navbar-brand"), "/") %>
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
-    <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav pull-right" id="left-co">
       <li>
         <a href="/"><i class="glyphicon glyphicon-home"></i> Home</a>
       </li>
-      <li><%= link_to session[:cas_user],"#"%></li>
-      <li><%= link_to "Create post", new_post_path%></li>
+      <li style="font-weight:bold;text-transform:uppercase;"><%= link_to "Create post", new_post_path%></li>
       <li><%= link_to "Signout", sessions_destroy_path%></li>
     </ul>
     </nav>
